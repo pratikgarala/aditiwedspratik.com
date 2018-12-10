@@ -1,0 +1,113 @@
+/*--------------------------------------------------------------
+	#home style 2
+--------------------------------------------------------------*/
+/*--------------------------------------------------------------
+#2.1	couple-section-s2
+--------------------------------------------------------------*/
+.couple-section-s2 {
+	.couple .groom {
+		width: 170px;
+		float: right;
+		text-align: right;
+		padding: 100px 15px 0;
+
+		@include media-query(767px) {
+			width: 100%;
+			float: none;
+			text-align: center;
+			padding: 0;
+		}
+	}
+
+	.couple .bride {
+		width: 170px;
+		float: left;
+		padding: 100px 15px 0;
+
+		@include media-query(767px) {
+			width: 100%;
+			float: none;
+			text-align: center;
+			padding: 55px 0 0;
+		}
+	}
+
+	.couple .details {
+		width: calc(100% - 340px);
+		float: left;
+		text-align: center;
+		padding: 50px 70px 0;
+
+ 		@include media-query(991px) {
+			padding: 50px 50px 0;
+		}
+
+		@include media-query(767px) {
+			width: 100%;
+			float: none;
+			padding: 40px 0;
+		}
+	}
+
+	.groom h4,
+	.bride h4 {
+		font-size: 30px;
+		font-size: calc-rem-value(30);
+		margin: 0 0 0.4em;
+	}
+
+	.groom p,
+	.bride p {
+		font-size: 18px;
+		font-size: calc-rem-value(18);
+		line-height: 0.8em;
+		color: #c5c4c4;
+		margin: 0;
+	}
+
+	.details {
+
+		p {
+			font-size: 20px;
+			font-size: calc-rem-value(20);
+			margin: 0;
+
+			@include media-query(991px) {
+				font-size: 18px;
+				font-size: calc-rem-value(18);
+			}
+		}
+
+		p:nth-child(2) {
+			margin: 1em 0 2em;
+			font-style: italic;
+		}
+	}
+}
+
+
+/*--------------------------------------------------------------
+#2.2	story-section-s2
+--------------------------------------------------------------*/
+.story-section-s2 {
+	padding: 110px 0 85px;
+
+	@include media-query(991px) {
+
+	}
+
+	.text {
+		text-align: center;
+	}
+
+	.text p {
+		font-size: 18px;
+		font-size: calc-rem-value(18);
+		line-height: 2em;
+	}
+
+	.img-holder {
+		margin-top: 60px;
+		text-align: center;
+	}
+}

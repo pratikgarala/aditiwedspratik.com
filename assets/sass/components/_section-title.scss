@@ -1,0 +1,61 @@
+.section-title {
+	text-align: center;
+	padding: 80px 0 0;
+	margin-bottom: 70px;
+	position: relative;
+
+	&:before {
+		content: "";
+		@include background-style("../images/section-title-flower.png", center center, auto, no-repeat, local);
+		width: 172px;
+		height: 84px;
+		position: absolute;
+		left: 50%;
+		top: 0;
+		@include translatingX();
+	}
+
+	@include media-query(767px) {
+		margin-bottom: 60px;
+	}
+
+
+	h2 {
+		font-size: 55px;
+		font-size: calc-rem-value(55);
+		padding: 0.15em 0.7em 0.2em;
+		margin: 0;
+		border-top: 1px solid $theme-primary-color;
+		border-bottom: 1px solid $theme-primary-color;
+		display: inline-block;
+		position: relative;
+
+		@include media-query(991px) {
+			font-size: 45px;
+			font-size: calc-rem-value(45);
+		}
+
+		@include media-query(767px) {
+			font-size: 38px;
+			font-size: calc-rem-value(38);
+		}
+
+		&:before,
+		&:after {
+			content: "";
+			background: $theme-primary-color;
+			width: 1px;
+			height: calc(100% + 24px);
+			position: absolute;
+			top: -12px;
+		}
+
+		&:before {
+			left: 12px;
+		}
+
+		&:after {
+			right: 12px;
+		}
+	}
+}

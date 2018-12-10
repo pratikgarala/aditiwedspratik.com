@@ -1,0 +1,174 @@
+/*--------------------------------------------------------------
+#0.5	footer
+--------------------------------------------------------------*/
+.site-footer {
+	@include background-style("../images/footer-bg.jpg", center center, cover, no-repeat, local);
+	text-align: center;
+	padding: 235px 0 250px;
+	position: relative;
+	overflow: hidden;
+
+	@include media-query(1199px) {
+		padding: 135px 0 150px;
+	}
+
+	@include media-query(991px) {
+		padding: 85px 0 100px;
+	}
+
+	&:before {
+		content: "";
+		@include overlay(transparentize($black, 0.3));
+	}
+
+	.text {
+		position: relative;
+
+		&:before {
+			font-family: Flaticon;
+			content: "\f110";
+			font-size: 250px;
+			font-size: calc-rem-value(250);
+			color: $white;
+			position: absolute;
+			left: 50%;
+			top: 50%;
+			@include center-by-translating();
+			opacity: 0.05;
+
+			@include media-query(450px) {
+				font-size: 200px;
+				font-size: calc-rem-value(200);
+			}
+		}
+	}
+
+	h2 {
+		font-size: 60px;
+		font-size: calc-rem-value(60);
+		color: #eae8e8;
+		padding: 0 100px;
+		margin: 0 0 0.3em;
+		display: inline-block;
+		position: relative;
+		z-index: 2;
+
+		@include media-query(767px) {
+			font-size: 50px;
+			font-size: calc-rem-value(50);
+			padding: 0 40px;
+		}
+
+		@include media-query(450px) {
+			font-size: 45px;
+			font-size: calc-rem-value(45);
+			padding: 0;
+		}
+
+		&:before,
+		&:after {
+			content: "";
+			background-color: transparentize($white, 0.5);
+			width: 70px;
+			height: 1px;
+			position: absolute;
+			top: 50%;
+			@include translatingY();
+
+			@include media-query(767px) {
+				width: 30px;
+			}
+
+			@include media-query(450px) {
+				display: none;
+			}
+		}
+
+		&:before {
+			left: 0;
+		}
+
+		&:after {
+			right: 0;
+		}
+	}
+
+	p {
+		font-size: 24px;
+		font-size: calc-rem-value(24);
+		line-height: 1em;
+		margin: 0;
+		color: #eae8e8;
+		position: relative;
+		z-index: 2;
+
+		@include media-query(767px) {
+			font-size: 20px;
+			font-size: calc-rem-value(20);
+		}
+	}
+
+	.back-to-top {
+		background-color: $theme-primary-color;
+		width: 90px;
+		height: 90px;
+		line-height: 70px;
+		border-radius: 50%;
+		position: absolute;
+		left: 50%;
+		@include translatingX();
+		bottom: -50px;
+
+		i {
+			display: inline-block;
+			font-size: 22px;
+			font-size: calc-rem-value(22);
+			color: $white;
+	    	-webkit-animation: pointerMoving 1.3s infinite;
+	    	animation: pointerMoving 1.3s infinite;
+		}
+
+		a {
+			display: block;
+		}
+	}
+}
+
+.footer-style2 {
+	@include background-style("../images/footer-bg2.jpg", center center, cover, no-repeat, local);
+}
+
+
+@-webkit-keyframes pointerMoving {
+	0% {
+		-webkit-transform: translateY(5px);
+		transform: translateY(5px);
+	}
+
+	80% {
+		-webkit-transform: translateY(-5px);
+		transform: translateY(-5px);
+	}
+
+	100% {
+		-webkit-transform: translateY(5px);
+		transform: translateY(5px);
+	}
+}
+
+@keyframes pointerMoving {
+	0% {
+		-webkit-transform: translateY(5px);
+		transform: translateY(5px);
+	}
+
+	80% {
+		-webkit-transform: translateY(-5px);
+		transform: translateY(-5px);
+	}
+
+	100% {
+		-webkit-transform: translateY(5px);
+		transform: translateY(5px);
+	}
+}

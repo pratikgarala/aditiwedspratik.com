@@ -1,0 +1,25 @@
+/*---------------------------
+	Fonts
+----------------------------*/
+@import url('https://fonts.googleapis.com/css?family=Josefin+Sans:300,400,400i,600|Medula+One');
+
+// fonts
+$base-font-size: 16;
+$base-font: 'Josefin Sans', sans-serif;
+$heading-font: 'Medula One', cursive;
+
+
+
+// color
+$dark-gray: #333333;
+$light-gray: #949494;
+$light-gray2: #f8f8f8;
+$white: #fff;
+$black: #000;
+$pink: #fbb8ac;
+
+$theme-primary-color: $pink;
+$body-bg-color: $white;
+$section-bg-color: $light-gray2;
+$text-color: $light-gray;
+$heading-color: $dark-gray;
